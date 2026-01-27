@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPUESTOS Y LUBRICANTES P&R | Comendador</title>
+    
+    <meta property="og:title" content="REPUESTOS Y LUBRICANTES P&R">
+    <meta property="og:description" content="Las mejores Gomas GG y lubricantes en Comendador, Elías Piña. ¡Catálogo interactivo disponible!">
+    <meta property="og:image" content="fondo.jpg">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* FUENTE ARIAL REQUERIDA */
+        body { 
+            background-color: #0a0a0a; 
+            color: #ffffff; 
+            font-family: Arial, Helvetica, sans-serif; 
+            overflow-x: hidden; 
+        }
+        .arial-black { font-family: Arial, Helvetica, sans-serif; font-weight: 900; }
+
+        /* SECCIÓN DEL NOMBRE CON FONDO LOCAL AL 15% */
+        .hero-bg {
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+            border-bottom: 2px solid #1a1a1a;
+        }
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('fondo.jpg'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15; 
+            z-index: 0;
+        }
+        .hero-content { position: relative; z-index: 10; }
+
+        /* SCROLL INFINITO DE IMÁGENES (EL CARRUSEL) */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-280px * 20)); }
+        }
+        .slider {
+            background: #000; height: 260px; overflow: hidden; position: relative; width: 100%;
+            border-bottom: 4px solid #dc2626; display: flex; align-items: center;
+        }
+        .slide-track { animation: scroll 80s linear infinite; display: flex; width: calc(280px * 140); }
+        .slide { width: 280px; padding: 15px; flex-shrink: 0; }
+        .slide img { 
+            width: 100%; height: 200px; object-fit: contain; border-radius: 20px; 
+            background: #1a1a1a; border: 1px solid #333; 
+        }
+
+        /* TARJETA ESTILO IMAGEN DE REFERENCIA */
+        .red-card {
+            background: #e5e7eb; color: #000; border-radius: 50px; border: 10px solid #dc2626;
+            padding: 3rem; margin-bottom: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .whatsapp-shadow { box-shadow: 0 0 30px rgba(34, 197, 94, 0.4); }
+    </style>
+</head>
+<body>
+
+    <header class="hero-bg p-10 md:py-24">
+        <div class="container mx-auto hero-content flex flex-col md:flex-row justify-between items-center gap-10">
+            <div data-aos="fade-right">
+                <img src="logo.png" alt="Logo P&R" class="h-24 mb-6" onerror="this.style.display='none'">
+                <h1 class="text-6xl md:text-8xl arial-black uppercase leading-none tracking-tighter">
+                    REPUESTOS Y <br> LUBRICANTES <br>
+                    <span class="text-red-600 text-7xl md:text-9xl">P&R</span>
+                </h1>
+                <p class="text-xl md:text-3xl italic text-zinc-400 mt-4 border-l-4 border-red-600 pl-4 uppercase font-bold tracking-tight">Comendador, Elías Piña</p>
+            </div>
+
+            <div class="text-center md:text-right space-y-6" data-aos="fade-left">
+                <div class="bg-black/70 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-white shadow-2xl">
+                    <p class="text-zinc-400 uppercase text-xs font-bold mb-2 tracking-[0.2em]">📍 CALLE SANTA TERESA #19</p>
+                    <p class="text-2xl font-bold italic">Comendador, E.P.</p>
+                    <p class="text-green-500 text-4xl arial-black mt-3">(809) 527-0381</p>
+                </div>
+                <a href="https://wa.me/18095270381" target="_blank" class="inline-flex items-center gap-4 bg-green-600 hover:bg-green-700 text-white text-2xl px-12 py-6 rounded-full arial-black transition-all whatsapp-shadow">
+                    <i class="fab fa-whatsapp text-3xl"></i> ESCRÍBENOS AL WHATSAPP
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="slider">
+        <div class="slide-track" id="slider-track"></div>
+    </div>
+
+    <main class="container mx-auto px-6 py-20">
+        <div class="red-card flex flex-col md:flex-row items-center gap-10" data-aos="fade-up">
+            <div class="md:w-3/5">
+                <h2 class="text-5xl md:text-7xl arial-black italic uppercase mb-6">GOMAS GG</h2>
+                <p class="text-zinc-800 text-2xl md:text-4xl italic leading-tight">
+                    La goma de los dominicanos. <br> 8 capas de pura resistencia para el trabajo duro.
+                </p>
+            </div>
+            <div class="md:w-2/5 flex justify-center">
+                <img src="goma1.png" class="max-h-80 drop-shadow-2xl" onerror="this.src='https://via.placeholder.com/400x400?text=GOMAS+P%26R'">
+            </div>
+        </div>
+    </main>
+
+    <section class="bg-zinc-950 py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl arial-black uppercase mb-12 underline decoration-red-600 tracking-tighter italic">Nuestro Inventario</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" id="galeria-fotos"></div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-16 text-center border-t border-zinc-900">
+        <h4 class="text-3xl arial-black text-red-600 mb-2 uppercase italic tracking-tighter">REPUESTOS Y LUBRICANTES P&R</h4>
+        <p class="text-zinc-500 font-bold uppercase text-sm mb-6 tracking-widest">Calle Santa Teresa #19, Comendador, Elías Piña</p>
+        <div class="text-white text-3xl arial-black italic">(809) 527-0381</div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        
+        const sliderTrack = document.getElementById('slider-track');
+        const galeria = document.getElementById('galeria-fotos');
+        const numFotos = 135; 
+
+        for (let i = 1; i <= numFotos; i++) {
+            const slide = document.createElement('div');
+            slide.className = 'slide';
+            slide.innerHTML = `<img src="goma${i}.png" onerror="this.parentElement.style.display='none'">`;
+            sliderTrack.appendChild(slide);
+
+            const item = document.createElement('div');
+            item.className = 'bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-red-600 transition duration-300';
+            item.innerHTML = `
+                <img src="goma${i}.png" class="w-full h-40 object-contain p-2" onerror="this.parentElement.style.display='none'">
+                <div class="bg-zinc-800 p-2 text-center text-[10px] arial-black uppercase tracking-tighter">GG-${i}</div>
+            `;
+            galeria.appendChild(item);
+        }
+    </script>
+</body>
+</html>
